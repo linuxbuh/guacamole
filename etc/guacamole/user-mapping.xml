@@ -1,0 +1,58 @@
+<user-mapping>
+<!-- Per-user authentication and config information -->
+
+   <!-- A user using md5 to hash the password
+   guacadmin user and its md5 hashed password below is used to 
+   login to Guacamole Web UI-->
+   <authorize 
+      username="" 
+      password="" 
+      encoding="md5">
+
+   <!-- Servers -->
+    <!-- Linux Servers SSH -->
+
+       <connection name="Linux Server1 SSH">
+       <protocol>ssh</protocol>
+       <param name="hostname">192.168.0.2</param>
+       <param name="port">22</param>
+       <param name="enable-sftp">true</param>
+       </connection>
+
+    <!-- Windows Servers RDP -->
+
+       <connection name="Windows Server1 RDP">
+       <protocol>rdp</protocol>
+       <param name="hostname">192.168.0.3</param>
+       <param name="port">3389</param>
+       <param name="username"></param>
+       <param name="password"></param>
+       <param name="domain"></param>
+       <param name="security">auto</param>
+       <param name="ignore-cert">true</param>
+       <param name="enable-drive">true</param> 
+       <param name="drive-path">/tmp</param> 
+       </connection>
+
+    <!-- Windows Servers VNC -->
+
+       <connection name="Windows Server2 VNC">
+       <protocol>vnc</protocol>
+       <param name="hostname">192.168.0.4</param>
+       <param name="port">5900</param>
+       <param name="username">avkroot</param>
+       <param name="password">N0AvkPass!</param>
+       <param name="enable-drive">true</param> 
+       <param name="drive-path">/tmp</param> 
+       </connection>
+
+   <!-- User comp -->
+    <!-- User comp Linux SSH -->
+    
+    <!-- User comp Windows RDP -->
+
+    <!-- User comp Windows VNC -->
+
+    </authorize>
+</user-mapping>
+
