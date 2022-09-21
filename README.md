@@ -1,2 +1,1 @@
-# guacamole
-guacamole
+# Config файлы для Apache Guacamole
